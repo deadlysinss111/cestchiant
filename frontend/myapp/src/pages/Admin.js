@@ -1,12 +1,12 @@
 import Menu from "../components/Menu";
-import PrintAll from "../components/PrintAll";
+import PrintAdmin from "../components/PrintAdmin";
 
 
-function Everyone(props){
+function Admin(props){
     return <div>
         <Menu />
-        <h1>Everyone is here !</h1>
-        <PrintAll/>
+        <h1>Admin Pannel</h1>
+        <PrintAdmin/>
     </div>
 };
 
