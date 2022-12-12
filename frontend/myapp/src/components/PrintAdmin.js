@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import RemoveFromPokedex from "../api/RemoveFromPokedex";
 import { getAll } from "../api/Fetch";
 import Button from 'react-bootstrap/Button';
+import { TestForm } from "../api/AddAPokepo";
+import AbsoluteRemove from "../api/AbsoluteRemove";
 
 
 
@@ -22,12 +23,12 @@ function PrintAll(){
                 return <div key={key} className="bloc-pokemon">
                     <img src={pokemon.image} />
                     <h2>{pokemon.name}</h2>
-                    <Button variant ="success" onClick={()=>RemoveFromPokedex(pokemon)}>supprimer</Button>{' '}
+                    <Button variant ="danger" onClick={()=>AbsoluteRemove(pokemon)}>supprimer</Button>{' '}
                 </div>
             })
         }
         </div>
-        
+        <TestForm />
     </div>;
 }
 

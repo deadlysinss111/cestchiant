@@ -8,6 +8,7 @@ import {
   Route
 } from "react-router-dom";
 import Everyone from './pages/Everyone';
+import Admin from './pages/Admin';
 
 
 
@@ -22,6 +23,9 @@ function App(props){
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/admin">
+          <Admin />
         </Route>
         <Route path="/YourPolidex">
           <YourPolidex />
