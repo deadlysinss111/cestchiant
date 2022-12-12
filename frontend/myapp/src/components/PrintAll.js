@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AddToPokedex from "../api/AddToPokedex";
 import { getAll } from "../api/Fetch";
-//import Button from '../node_modules/bootstrap/js/src/button';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -22,7 +22,7 @@ function PrintAll(){
                 return <div key={key} className="bloc-pokemon">
                     <img src={pokemon.image} />
                     <h2>{pokemon.name}</h2>
-                    <button variant ="success" onClick={()=>AddToPokedex(pokemon)}>Capturer !</button>
+                    <Button variant ="success" onClick={()=>AddToPokedex(pokemon)}>Capturer !</Button>
                 </div>
             })
         }

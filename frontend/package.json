@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "create-react-app": "^5.0.1",
+    "react-bootstrap": "^2.7.0",
     "react-hook-form": "^7.40.0",
     "react-router-dom": "^5.3.4"
   }

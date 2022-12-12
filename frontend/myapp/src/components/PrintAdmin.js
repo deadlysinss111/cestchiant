@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import RemoveFromPokedex from "../api/RemoveFromPokedex";
 import { getAll } from "../api/Fetch";
-//import Button from '../node_modules/bootstrap/js/src/button';
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -22,7 +22,7 @@ function PrintAll(){
                 return <div key={key} className="bloc-pokemon">
                     <img src={pokemon.image} />
                     <h2>{pokemon.name}</h2>
-                    <button variant ="success" onClick={()=>RemoveFromPokedex(pokemon)}>supprimer</button>
+                    <Button variant ="success" onClick={()=>RemoveFromPokedex(pokemon)}>supprimer</Button>{' '}
                 </div>
             })
         }
