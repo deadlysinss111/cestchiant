@@ -8,7 +8,8 @@ function AddToPokedex(id){
             },
             body: JSON.stringify({
                 name:id.name,
-                parti:id.parti
+                parti:id.parti,
+                image:id.image
             })
         }
     )
