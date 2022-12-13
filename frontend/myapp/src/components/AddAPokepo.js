@@ -6,7 +6,7 @@ import {useForm} from "react-hook-form";
 
 
 
-export function TestForm() {
+export function AddForm() {
     const { register, handleSubmit } = useForm();
     const onSubmit = (id) => {
       
@@ -23,10 +23,6 @@ export function TestForm() {
                 })
             }
         )
-      //console.log(data);
-      /*Coder ici pour préparer l'appel réseau POST avec FETCH !*/
-      //On peut transformer les données en JSON pour les envoyer dans notre appel
-      //JSON.stringify(data);
     }
   
     return (

@@ -7,7 +7,7 @@ function Everyone(props){
     return <div>
         <Menu />
         <h1>Everyone is here !</h1>
-        <PrintAll sort={getAll()}/>
+        <PrintAll />
     </div>
 };
 

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import AddToPokedex from "../api/AddToPokedex";
 import { Button } from 'react-bootstrap';
-import { SortInPokepo } from "./SortInPokepo";
 import { getAll } from "../api/Fetch";
+import { SortForm } from "./SortForm";
 
 
 
@@ -16,7 +16,7 @@ function PrintAll(){
             .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[]);
     return <div className="pokemon-list">
-        <SortInPokepo />
+        <SortForm />
         <div>
         {
             pokemons.map((pokemon,key) =>{
