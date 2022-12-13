@@ -21,6 +21,7 @@ function PrintOwned(){
                 return <div key={key} className="bloc-pokemon">
                     <img src={pokemon.image} />
                     <h2>{pokemon.name}</h2>
+                    <p>{pokemon.parti}</p>
                     <button onClick={()=>RemoveFromPokedex(pokemon.name)}>relâcher !</button>
                 </div>
             })
