@@ -2,11 +2,16 @@ import Menu from "../components/Menu";
 import PrintOwned from "../components/PrintOwned";
 
 function YourPolidex(props){
-    return (<div>
+    return <>
+    <div>
         <Menu />
         <h1>Here your Polidex !</h1>
         <PrintOwned />
-    </div>);
+    </div>
+    <footer id="foot" className="hidden">AntoineLeBG</footer>
+    </>
+
+    
 };
 
 export default YourPolidex;

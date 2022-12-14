@@ -53,8 +53,70 @@
 
 @keyframes coolAnimation {
   0%   {color: red;}
+  12.5%  {color: orange;}
   25%  {color: yellow;}
-  50%  {color: blue;}
-  75%   {color: red;}
-  100% {color: green;}
+  37.5%   {color: yellowgreen;}
+  50% {color: green;}
+  62.5% {color: cyan;}
+  75% {color: rgb(0, 153, 255);}
+  87.5% {color: blue;}
+  100% {color: rgb(128, 0, 79);}
+}
+body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e7/Flag_of_France_with_RF.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#imageu {
+  box-shadow: 0 0 2em #282c34;
+  border-radius: 25%;
+}
+.pokemon-list {
+  text-align: center ;
+}
+form {
+  text-align: center ;
+}
+h2 {
+  text-align: center ;
+  box-shadow: 0 0 2em #282c34;
+}
+h1 {
+  text-align: center ;
+  box-shadow: 0 0 2em #282c34;
+}
+#choice:hover{
+  background-color: gray;
+  text-align: center;
+}
+#nav {
+  padding: 0px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: white;
+  border-style: ridge;
+  border-color: gold;
+
+}
+#choice {
+  flex-direction: row;
+  justify-content: center;
+}
+#foot {
+  text-align: center;
+  background-color: none;
+
+}
+#rule{
+  box-shadow: 0 0 2em #282c34;
+  background-color: white;
+}
+#rule p{
+  text-align: center;
+}
+#adminp{
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 1em #282c34;
 }

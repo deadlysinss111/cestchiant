@@ -30,6 +30,32 @@ export function ModifForm(props) {
                 })
             }
         )
+        fetch(
+            'http://localhost:4444/pokepo/updateChance', {
+                method: 'POST', 
+                headers: {
+                    'Accept': 'application/json', 
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({
+                    name:props.pokemon.name,
+                    to:id.chance
+                })
+            }
+        )
+        fetch(
+            'http://localhost:4444/pokepo/updateImage', {
+                method: 'POST', 
+                headers: {
+                    'Accept': 'application/json', 
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({
+                    name:props.pokemon.name,
+                    to:id.image
+                })
+            }
+        )
     }
   
     return (
@@ -42,6 +68,8 @@ export function ModifForm(props) {
           <option value="gauche">gauche</option>
           <option value="extrême gauche">extrême gauche</option>
         </select>
+        <input defaultValue={props.pokemon.chance} {...register("chance")} placeholder="Chance" />
+        <input defaultValue={props.pokemon.image} {...register("image")} placeholder="Image" />
         <Button variant="warning" type="submit">Modifier</Button>
       </form>
     );

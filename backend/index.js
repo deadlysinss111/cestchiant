@@ -85,6 +85,23 @@ app.post('/pokepo/updateParti', jsonParser, (req, res) => {
   res.json(body);
 });
 
+//update la chance de capture d'un pokemon
+app.post('/pokepo/updateChance', jsonParser, (req, res) => {
+  const dbConnect = dbo.getDb();
+  const body = req.body;
+  console.log('Got body:', body);
+  dbConnect.collection("pokepo").updateOne({name:body.name}, {$set:{chance:body.to}})
+  res.json(body);
+});
+
+//update l'image d'un pokemon
+app.post('/pokepo/updateImage', jsonParser, (req, res) => {
+  const dbConnect = dbo.getDb();
+  const body = req.body;
+  console.log('Got body:', body);
+  dbConnect.collection("pokepo").updateOne({name:body.name}, {$set:{image:body.to}})
+  res.json(body);
+});
 
 //DANS LE POKEDEX
 

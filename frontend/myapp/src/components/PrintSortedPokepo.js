@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AddToPokedex from "../api/AddToPokedex";
 import { Alert, Button } from 'react-bootstrap';
 import { getSorted } from "../api/FetchSorted";
+import PrintAll from "./PrintAll";
 
 
 function PrintSorted(props){
@@ -33,14 +34,19 @@ function PrintSorted(props){
         <div>
         {
             pokemons.map((pokemon,key) =>{
-                return <div key={key} className="bloc-pokemon">
-                    <img src={pokemon.image} />
+                return <><div key={key} className="bloc-pokemon">
+                    <br></br>
+                    <img id="imageu" src={pokemon.image} />
+                    <br></br>
+                    <br></br>
                     <h2>{pokemon.name}</h2>
+                    <br></br>
                     <p>{pokemon.parti}</p>
                     <Button onClick={()=>random(pokemon)}>Capturer !</Button>
                     {showFail==pokemon?<Alert key="danger" variant="danger">Failed !</Alert>:null}
                     {showSuccess==pokemon?<Alert key="success" variant="success">Captured !</Alert>:null}
                 </div>
+                </>
             })
         }
         </div>
