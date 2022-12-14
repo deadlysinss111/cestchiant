@@ -6,10 +6,24 @@ import { getSorted } from "../api/FetchSorted";
 
 function PrintSorted(props){
     const [ pokemons, setPokemons ] = useState([]);
-    console.log("rr");
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [showFail, setShowFail] = useState(false);
+
+    function random(pokemon){
+        const chance = pokemon.chance;
+        const foo = Math.random() * 100;
+        if (foo < chance){
+            AddToPokedex(pokemon);
+            setShowSuccess(pokemon)
+            setShowFail(false)
+        }else{
+            setShowSuccess(false)
+            setShowFail(pokemon)
+        }
+        
+    }
 
     useEffect(() => {
-        console.log(props.parti)
         const pokemonsFetched = getSorted(props.parti);
         pokemonsFetched
             .then(result => setPokemons(result))
@@ -23,7 +37,9 @@ function PrintSorted(props){
                     <img src={pokemon.image} />
                     <h2>{pokemon.name}</h2>
                     <p>{pokemon.parti}</p>
-                    <Button variant ="success" onClick={()=>AddToPokedex(pokemon)}>Capturer !</Button>
+                    <Button onClick={()=>random(pokemon)}>Capturer !</Button>
+                    {showFail==pokemon?<Alert key="danger" variant="danger">Failed !</Alert>:null}
+                    {showSuccess==pokemon?<Alert key="success" variant="success">Captured !</Alert>:null}
                 </div>
             })
         }

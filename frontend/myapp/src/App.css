@@ -38,5 +38,23 @@
 }
 
 .hidden{
-  color: transparent;
+  color: transparent !important;
+}
+
+.hidden:hover{
+  color:black !important;
+}
+
+#merveilleux{
+  animation-name: coolAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes coolAnimation {
+  0%   {color: red;}
+  25%  {color: yellow;}
+  50%  {color: blue;}
+  75%   {color: red;}
+  100% {color: green;}
 }

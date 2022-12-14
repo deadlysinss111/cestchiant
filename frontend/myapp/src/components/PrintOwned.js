@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import RemoveFromPokedex from "../api/RemoveFromPokedex";
 import { getOwned } from "../api/FetchOwned";
+import { Button } from "react-bootstrap";
 
 
 function PrintOwned(){
@@ -21,10 +22,10 @@ function PrintOwned(){
                 return <div key={key} className="bloc-pokemon">
                     <img src={pokemon.image} />
                     <h2>{pokemon.name}</h2>
-                    <button onClick={()=>{
+                    <Button variant="warning" onClick={()=>{
                         RemoveFromPokedex(pokemon.name);
                         setCount(count+1)
-                    }}>relâcher !</button>
+                    }}>relâcher !</Button>
                 </div>
             })
         }

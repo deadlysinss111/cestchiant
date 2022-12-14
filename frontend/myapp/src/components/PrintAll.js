@@ -18,11 +18,11 @@ function PrintAll(){
         const foo = Math.random() * 100;
         if (foo < chance){
             AddToPokedex(pokemon);
-            setShowSuccess(true)
+            setShowSuccess(pokemon)
             setShowFail(false)
         }else{
             setShowSuccess(false)
-            setShowFail(true)
+            setShowFail(pokemon)
         }
         
     }
@@ -35,8 +35,6 @@ function PrintAll(){
     },[]);
     return <>
         <SortForm />
-        {showFail?<Alert key="danger" variant="danger">Failed !</Alert>:null}
-        {showSuccess?<Alert key="success" variant="success">Captured !</Alert>:null}
         <div className="pokemon-list">
             <div>
             {
@@ -47,6 +45,8 @@ function PrintAll(){
                             <Button onClick={()=>{
                                 random(pokemon);
                             }}>Capturer !</Button>
+                            {showFail==pokemon?<Alert key="danger" variant="danger">Failed !</Alert>:null}
+                            {showSuccess==pokemon?<Alert key="success" variant="success">Captured !</Alert>:null}
                     </div>
                 })
             }
