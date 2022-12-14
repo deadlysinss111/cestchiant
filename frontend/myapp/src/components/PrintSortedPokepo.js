@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
-import { getAll } from "../api/Fetch";
-import Button from 'react-bootstrap/Button';
-import AbsoluteRemove from "../api/AbsoluteRemove";
-import {ModifForm} from "./ModifForm"
-import { AddForm} from "./AddAPokepo";
+import AddToPokedex from "../api/AddToPokedex";
+import { Alert, Button } from 'react-bootstrap';
+import { getSorted } from "../api/FetchSorted";
 
 
 
 
-function PrintAdmin(){
+function PrintSorted(props){
     const [ pokemons, setPokemons ] = useState([]);
-    
+    console.log("rr");
 
     useEffect(() => {
-        const pokemonsFetched = getAll();
+        console.log(props.parti)
+        const pokemonsFetched = getSorted(props.parti);
         pokemonsFetched
             .then(result => setPokemons(result))
             .catch(error=>console.error("Erreur avec notre API :",error.message));
@@ -26,18 +25,13 @@ function PrintAdmin(){
                     <img src={pokemon.image} />
                     <h2>{pokemon.name}</h2>
                     <p>{pokemon.parti}</p>
-                    <Button variant ="danger" onClick={()=>AbsoluteRemove(pokemon)}>supprimer</Button>
-                    <ModifForm pokemon={pokemon} />
+                    <Button variant ="success" onClick={()=>AddToPokedex(pokemon)}>Capturer !</Button>
                 </div>
             })
         }
         </div>
-        <h2>Add a new one ?</h2>
-        <AddForm />
+        <Alert variant="secondary">Voilà tous les pokepo de {props.parti}</Alert>
     </div>;
 }
 
-export default PrintAdmin;
-
-
-
+export default PrintSorted;

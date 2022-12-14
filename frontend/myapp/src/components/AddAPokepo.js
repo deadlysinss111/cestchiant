@@ -6,7 +6,7 @@ import {useForm} from "react-hook-form";
 
 
 
-export function TestForm() {
+export function AddForm() {
     const { register, handleSubmit } = useForm();
     const onSubmit = (id) => {
       
@@ -19,14 +19,12 @@ export function TestForm() {
                 },
                 body: JSON.stringify({
                     name:id.name,
-                    parti:id.parti
+                    parti:id.parti,
+                    image:id.image,
+                    chance:id.chance
                 })
             }
         )
-      //console.log(data);
-      /*Coder ici pour préparer l'appel réseau POST avec FETCH !*/
-      //On peut transformer les données en JSON pour les envoyer dans notre appel
-      //JSON.stringify(data);
     }
   
     return (
@@ -39,6 +37,8 @@ export function TestForm() {
           <option value="gauche">gauche</option>
           <option value="extrême gauche">extrême gauche</option>
         </select>
+        <input {...register("chance")} placeholder="Chance /100 ?" />
+        <input {...register("image")} placeholder="Image" />
         <button type="submit">Valider</button>
       </form>
     );

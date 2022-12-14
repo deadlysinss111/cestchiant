@@ -30,10 +30,6 @@ export function ModifForm(props) {
                 })
             }
         )
-      //console.log(data);
-      /*Coder ici pour préparer l'appel réseau POST avec FETCH !*/
-      //On peut transformer les données en JSON pour les envoyer dans notre appel
-      //JSON.stringify(data);
     }
   
     return (

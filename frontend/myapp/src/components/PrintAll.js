@@ -3,6 +3,7 @@ import AddToPokedex from "../api/AddToPokedex";
 import { Button } from 'react-bootstrap';
 import Alert from 'react-bootstrap/Alert';
 import { getAll } from "../api/Fetch";
+import { SortForm } from "./SortForm";
 
 
 
@@ -33,6 +34,7 @@ function PrintAll(){
             .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[]);
     return <>
+        <SortForm />
         {showFail?<Alert key="danger" variant="danger">Failed !</Alert>:null}
         {showSuccess?<Alert key="success" variant="success">Captured !</Alert>:null}
         <div className="pokemon-list">

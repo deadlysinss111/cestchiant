@@ -1,4 +1,6 @@
-function RemoveFromPokedex(name){
+
+function RemoveFromPokedex(item){
+
     fetch(
         'http://localhost:4444/polidex/delete', {
             method: 'POST', 
@@ -7,7 +9,7 @@ function RemoveFromPokedex(name){
                 'Content-Type':'application/json'
             },
             body: JSON.stringify({
-                name:name
+                name:item
             })
         }
     )
