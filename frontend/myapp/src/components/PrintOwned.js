@@ -26,7 +26,7 @@ function PrintOwned(){
                     <br></br>
                     <h2>{pokemon.name}</h2>
                     <br></br>
-                    <p>{pokemon.parti}</p>
+                    <p><span id="adminp">{pokemon.parti}</span></p>
                     <br></br>
                     <Button variant="warning" onClick={()=>{
                         RemoveFromPokedex(pokemon.name);

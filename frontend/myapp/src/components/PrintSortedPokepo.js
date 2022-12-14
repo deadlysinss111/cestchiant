@@ -41,7 +41,8 @@ function PrintSorted(props){
                     <br></br>
                     <h2>{pokemon.name}</h2>
                     <br></br>
-                    <p>{pokemon.parti}</p>
+                    <p><span id="adminp">{pokemon.parti}</span></p>
+                    <br></br>
                     <Button onClick={()=>random(pokemon)}>Capturer !</Button>
                     {showFail==pokemon?<Alert key="danger" variant="danger">Failed !</Alert>:null}
                     {showSuccess==pokemon?<Alert key="success" variant="success">Captured !</Alert>:null}
