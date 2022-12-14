@@ -1,4 +1,3 @@
-import { getAll } from "../api/Fetch";
 import Menu from "../components/Menu";
 import PrintAll from "../components/PrintAll";
 

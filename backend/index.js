@@ -19,14 +19,11 @@ app.use(cors())
 suite du code ici
 */
 /* index.js code before... */
-app.get("/yolo/pokepo", function (req, res) {
-    //on se connecte à la DB MongoDB
+app.get("/pokepo/print", function (req, res) {
     const dbConnect = dbo.getDb();
-    //premier test permettant de récupérer mes pokemons !
     dbConnect
       .collection("pokepo")
-      .find({}) // permet de filtrer les résultats
-      /*.limit(50) // pourrait permettre de limiter le nombre de résultats */
+      .find({})
       .toArray(function (err, result) {
         if (err) {
           res.status(400).send("Error fetching pokemons!");
@@ -34,11 +31,6 @@ app.get("/yolo/pokepo", function (req, res) {
           res.json(result);
         }
       });
-      /*
-      Bref lisez la doc, 
-      il y a plein de manières de faire ce qu'on veut :) 
-      */
-      
   });
 
   

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import AddToPokedex from "../api/AddToPokedex";
-import { Button } from 'react-bootstrap';
+import { Alert, Button } from 'react-bootstrap';
 import { getSorted } from "../api/FetchSorted";
-import { SortForm } from "./SortForm";
 
 
 
@@ -19,7 +18,6 @@ function PrintSorted(props){
             .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[]);
     return <div className="pokemon-list">
-        <SortForm />
         <div>
         {
             pokemons.map((pokemon,key) =>{
@@ -32,6 +30,7 @@ function PrintSorted(props){
             })
         }
         </div>
+        <Alert variant="secondary">Voilà tous les pokepo de {props.parti}</Alert>
     </div>;
 }
 

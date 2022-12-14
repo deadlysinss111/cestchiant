@@ -19,7 +19,9 @@ export function AddForm() {
                 },
                 body: JSON.stringify({
                     name:id.name,
-                    parti:id.parti
+                    parti:id.parti,
+                    image:id.image,
+                    chance:id.chance
                 })
             }
         )
@@ -35,6 +37,8 @@ export function AddForm() {
           <option value="gauche">gauche</option>
           <option value="extrême gauche">extrême gauche</option>
         </select>
+        <input {...register("chance")} placeholder="Chance /100 ?" />
+        <input {...register("image")} placeholder="Image" />
         <button type="submit">Valider</button>
       </form>
     );

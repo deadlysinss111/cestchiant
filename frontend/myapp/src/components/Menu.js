@@ -7,8 +7,9 @@ function Menu(){
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
-            <li><Link to="/YourPolidex">Your Polidex</Link></li>
+            <li><Link to="/yourpolidex">Your Polidex</Link></li>
             <li><Link to="/everyone">everyone here</Link></li>
+            <li ><Link to="/AntoineLeBG" className="hidden">you didnt see me :x</Link></li>
         </ul>
     </nav>
 };

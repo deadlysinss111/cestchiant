@@ -1,7 +1,7 @@
 
 export const getAll = async () => {
     const response = await fetch(
-        'http://localhost:4444/yolo/pokepo', {
+        'http://localhost:4444/pokepo/print', {
             method: 'GET', 
             headers: {
                 'Accept': 'application/json', 
