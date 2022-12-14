@@ -4,8 +4,6 @@ import { Alert, Button } from 'react-bootstrap';
 import { getSorted } from "../api/FetchSorted";
 
 
-
-
 function PrintSorted(props){
     const [ pokemons, setPokemons ] = useState([]);
     console.log("rr");
@@ -16,7 +14,7 @@ function PrintSorted(props){
         pokemonsFetched
             .then(result => setPokemons(result))
             .catch(error=>console.error("Erreur avec notre API :",error.message));
-    },[]);
+    },[props]);
     return <div className="pokemon-list">
         <div>
         {
