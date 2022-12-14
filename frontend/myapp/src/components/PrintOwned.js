@@ -20,14 +20,14 @@ function PrintOwned(){
         {
             pokemons.map((pokemon,key) =>{
                 return <div key={key} className="bloc-pokemon">
-                    <br></br>
+                    <br />
                     <img id="imageu" src={pokemon.image} />
-                    <br></br>
-                    <br></br>
+                    <br />
+                    <br />
                     <h2>{pokemon.name}</h2>
-                    <br></br>
+                    <br />
                     <p><span id="adminp">{pokemon.parti}</span></p>
-                    <br></br>
+                    <br />
                     <Button variant="warning" onClick={()=>{
                         RemoveFromPokedex(pokemon.name);
                         setCount(count+1)

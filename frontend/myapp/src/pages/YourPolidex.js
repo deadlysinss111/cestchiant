@@ -1,3 +1,4 @@
+import { CustomFooter } from "../components/Footer";
 import Menu from "../components/Menu";
 import PrintOwned from "../components/PrintOwned";
 
@@ -8,7 +9,7 @@ function YourPolidex(props){
         <h1>Here your Polidex !</h1>
         <PrintOwned />
     </div>
-    <footer id="foot" className="hidden">AntoineLeBG</footer>
+    <CustomFooter />
     </>
 
     

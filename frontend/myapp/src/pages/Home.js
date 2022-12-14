@@ -1,3 +1,4 @@
+import { CustomFooter } from "../components/Footer";
 import Menu from "../components/Menu";
 
 function Home(props){
@@ -14,9 +15,8 @@ function Home(props){
         <h2>Formidable ! Et c'est quoi le but ?</h2><br />
         <p>Pose pas de questions et catch 'em all !</p>
     </div>
-    
+    <CustomFooter />
     </div>
-    <footer id="foot" className="hidden">AntoineLeBG</footer>
     </>
 }
 

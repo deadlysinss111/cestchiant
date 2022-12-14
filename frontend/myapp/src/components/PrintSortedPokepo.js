@@ -35,14 +35,14 @@ function PrintSorted(props){
         {
             pokemons.map((pokemon,key) =>{
                 return <><div key={key} className="bloc-pokemon">
-                    <br></br>
+                    <br />
                     <img id="imageu" src={pokemon.image} />
-                    <br></br>
-                    <br></br>
+                    <br />
+                    <br />
                     <h2>{pokemon.name}</h2>
-                    <br></br>
+                    <br />
                     <p><span id="adminp">{pokemon.parti}</span></p>
-                    <br></br>
+                    <br />
                     <Button onClick={()=>random(pokemon)}>Capturer !</Button>
                     {showFail==pokemon?<Alert key="danger" variant="danger">Failed !</Alert>:null}
                     {showSuccess==pokemon?<Alert key="success" variant="success">Captured !</Alert>:null}
